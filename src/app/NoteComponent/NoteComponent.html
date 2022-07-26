@@ -1,0 +1,66 @@
+<div mat-dialog-title cdkDrag cdkDragRootElement=".cdk-overlay-pane" cdkDragHandle>
+  {{caption}}
+  <div class="flex-grow-1"></div>
+  <button type="button" class="close" tabindex="-1" (click)="onClose()">
+    <span style="color: white; font-size: 25px;" aria-hidden="true">×</span>
+  </button>
+</div>
+<mat-dialog-content>
+  <div class="mat-dialog-body">
+    <div class="h-100">
+      <div class="table-header d-flex bg-orange" *ngIf="testDto.caption.length > 0">
+        <h5 class="modal-title"> 標題:</h5>
+      </div>
+      <div class="table-body">
+        <span>{{testDto.caption}}</span>
+      </div>
+      <div class="table-header d-flex bg-orange">
+        <h5 class="modal-title"> 年齡:</h5>
+      </div>
+      <div class="table-body">
+        <span>{{testDto.S_Age}}</span>
+      </div>
+      <div class="table-header d-flex bg-orange">
+        <h5 class="modal-title"> 數學成績:</h5>
+      </div>
+      <div class="table-body">
+        <span>{{testDto.S_Math}}</span>
+      </div>
+      <div class="table-header d-flex bg-orange">
+        <h5 class="modal-title"> 國文成績:</h5>
+      </div>
+      <div class="table-body">
+        <span>{{testDto.S_Chinese}}</span>
+      </div>
+      <div class="table-header d-flex bg-orange">
+        <h5 class="modal-title"> 自然成績:</h5>
+      </div>
+      <div class="table-body">
+        <span>{{testDto.S_Scientist}}</span>
+      </div>
+      <div class="table-header d-flex bg-orange">
+        <h5 class="modal-title"> 老師評語:</h5>
+      </div>
+      <div class="table-body">
+        <span>{{testDto.T_Note}}</span>
+      </div>
+      <div class="table-header d-flex bg-orange">
+        <h5 class="modal-title"> 學生心得:</h5>
+      </div>
+      <div class="table-body">
+        <span>{{testDto.S_Note}}</span>
+      </div>
+    </div>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <div class="mat-dialog-footer">
+    <button type="button" tabindex="-1"
+            class="btn btn-warning"
+            matTooltip="F10:關閉"
+            matTooltipPosition="above"
+            (click)="onClose();">
+      <span class="pl-5">關閉</span>
+    </button>
+  </div>
+</mat-dialog-actions>
