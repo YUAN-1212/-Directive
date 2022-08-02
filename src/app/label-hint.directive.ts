@@ -33,6 +33,7 @@ export class LabelHintDirective {
   @HostListener("contextmenu", ["$event"]) // 右鍵
   onlabel(event: PointerEvent): void {
     if (event !== undefined && event.type === 'contextmenu') {
+      // 右鍵
       // preventDefault avoids to show the visualization of the right-click menu of the browser
       event.preventDefault();
     }
