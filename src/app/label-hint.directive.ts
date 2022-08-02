@@ -30,7 +30,13 @@ export class LabelHintDirective {
 
   /** click */
   @HostListener('click')
+  @HostListener("contextmenu", ["$event"]) // 右鍵
   onlabel(): void {
+    if (event !== undefined && event.type === 'contextmenu') {
+      // preventDefault avoids to show the visualization of the right-click menu of the browser
+      event.preventDefault();
+    }
+
     if (this.element.classList.contains('docHint')) {
       const res = this.data.find((p) => p.S_Name === this.element.innerText);
       this.dialog
