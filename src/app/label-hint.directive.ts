@@ -43,6 +43,8 @@ export class LabelHintDirective {
       this.dialog
         .open(NoteComponent, {
           disableClose: true,
+          hasBackdrop: true,//false的話就是關閉黑色背景
+          panelClass: ['custom-dialog-resize'],
           data: res,
         })
         .afterClosed()

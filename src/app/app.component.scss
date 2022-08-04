@@ -22,3 +22,8 @@ label.docHint {
   text-decoration-color: rgb(236, 55, 55);
   cursor: pointer;
 }
+
+/** Hint的Panel可隨意調整大小 */
+.custom-dialog-resize .mat-dialog-container {
+  resize: both;
+}
