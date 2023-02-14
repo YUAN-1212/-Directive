@@ -1,4 +1,6 @@
 # DirectivePractce
+live demo
+https://stackblitz.com/edit/direc123?file=src%2Fapp%2Fapp.component.ts
 
 2022.08.04 調整css(還沒成功，有空再研究)
 
